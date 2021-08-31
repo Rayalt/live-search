@@ -1,0 +1,179 @@
+extends ../pug/layout_default.pug
+
+block meta
+	title Главная страница
+
+block content
+	section.section.hero
+		.section__inner
+			.grid
+				.grid__row
+					.grid__col.grid__col_xs-12.grid__col_md-12
+						h1.hero__heading Институт непрерывного образования
+						h2.hero__subtitle Университет управления «ТИСБИ»
+						p.hero__descr Программы дополнительного образования для начинающих и практикующих специалистов: повышение квалификации, профессиональная переподготовка и общеразвивающие программы для взрослых.
+				.grid__row
+					.grid__col.grid__col_xs-12.grid__col_md-8.col-offset__md-2
+						.hero__search
+							h2.hero__search-title Найти курс по названию:
+							form.hero__form
+								.input.hero__input
+									input.input__search(placeholder='Введите название курса' type='search')
+									svg.input__clear
+										use(xlink:href='/img/svgSprite.svg#icon__cross')
+								ul.drop-search(style='display: none;')
+									li.drop-search__loader
+										+loader
+	section.section
+		.section__inner.courses
+			.grid
+				.grid__row
+					.grid__col.grid__col_xs-12.grid__col_md-12
+						h1.page-title.courses__title Курсы
+						.courses__section
+							h2.courses__cards-title Государственное и муниципальное управление и сфера закупок
+							.courses__cards
+								+card-courses([
+									{
+										href: 'course.html',
+										img: 'state',
+										pill: 'Дистанционное',
+										title: 'Управление государственными и муниципальными закупками',
+										subtitle: 'Профессиональная переподготовка',
+										row: [{time: 'Объём', info: '254 академических часа'}, {
+											time: 'Сроки обучения',
+											info: 'По мере набора группы'
+										}]
+									},
+									{
+										href: 'course_2.html?tab=1',
+										img: 'purchases',
+										pill: 'Очное',
+										title: 'Контрактная система в сфере закупок',
+										subtitle: 'Профессиональная переподготовка',
+										row: [{time: 'Объём', info: '254 академических часа'}, {
+											time: 'Сроки обучения',
+											info: 'В любое время'
+										}]
+									},
+									{
+										href: 'course_2.html?tab=2',
+										img: 'management',
+										pill: 'Дистанционное',
+										title: 'Контрактная система в сфере закупок',
+										subtitle: 'Профессиональная переподготовка',
+										row: [{time: 'Объём', info: '254 академических часа'}, {
+											time: 'Сроки обучения',
+											info: 'В любое время'
+										}]
+									},
+									{
+										href: '#',
+										img: 'investments',
+										pill: 'Очное',
+										title: 'Реализация требований ФГОС ДО и профессионального стандарта «Педагог» в деятельности воспитателя при организации основных видов деятельности детей дошкольного возраста с ОВЗ',
+										subtitle: 'Профессиональная переподготовка',
+										row: [{time: 'Объём', info: '254 академических часа'}, {
+											time: 'Сроки обучения',
+											info: 'В любое время'
+										}]
+									}
+								])
+						.courses__section
+							h2.courses__cards-title Экономика. Финансы. Страхование
+							.courses__cards
+								+card-courses([
+									{
+										href: 'course.html',
+										img: 'state',
+										pill: 'Дистанционное',
+										title: 'Управление государственными и муниципальными закупками',
+										subtitle: 'Профессиональная переподготовка',
+										row: [{time: 'Объём', info: '254 академических часа'}, {
+											time: 'Сроки обучения',
+											info: 'По мере набора группы'
+										}]
+									},
+									{
+										href: 'course_2.html?tab=1',
+										img: 'purchases',
+										pill: 'Очное',
+										title: 'Контрактная система в сфере закупок',
+										subtitle: 'Профессиональная переподготовка',
+										row: [{time: 'Объём', info: '254 академических часа'}, {
+											time: 'Сроки обучения',
+											info: 'В любое время'
+										}]
+									},
+									{
+										href: 'course_2.html?tab=2',
+										img: 'management',
+										pill: 'Дистанционное',
+										title: 'Контрактная система в сфере закупок',
+										subtitle: 'Профессиональная переподготовка',
+										row: [{time: 'Объём', info: '254 академических часа'}, {
+											time: 'Сроки обучения',
+											info: 'В любое время'
+										}]
+									}
+								])
+						.courses__section
+							h2.courses__cards-title Психология и коммуникации
+							.courses__cards
+								+card-courses([
+									{
+										href: 'course.html',
+										img: 'state',
+										pill: 'Дистанционное',
+										title: 'Управление государственными и муниципальными закупками',
+										subtitle: 'Профессиональная переподготовка',
+										row: [{time: 'Объём', info: '254 академических часа'}, {
+											time: 'Сроки обучения',
+											info: 'По мере набора группы'
+										}]
+									}
+								])
+	//-section.section
+		.section__inner
+			.grid
+				.grid__row
+					.grid__col.grid__col_xs-12.grid__col_md-8.col-offset__md-2
+						.hero
+							.hero__search
+								h2.hero__subtitle.subtitle Найти курс по названию:
+								form.hero__form
+									.input.hero__input
+										input.input__search(placeholder='Введите название курса' type='search')
+									ul.drop-search
+										li.drop-search__loader
+											+loader
+				.grid__row
+					.grid__col.grid__col_xs-12.grid__col_md-8.col-offset__md-2
+						.hero
+							.hero__search
+								h2.hero__subtitle.subtitle Найти курс по названию:
+								form.hero__form
+									.input.hero__input
+										input.input__search(placeholder='Введите название курса' type='search')
+									ul.drop-search
+										li.drop-search__item
+											.drop-search__message Ничего не найдено
+				.grid__row
+					.grid__col.grid__col_xs-12.grid__col_md-8.col-offset__md-2
+						.hero
+							.hero__search
+								h2.hero__subtitle.subtitle Найти курс по названию:
+								form.hero__form
+									.input.hero__input
+										input.input__search(placeholder='Введите название курса' type='search')
+									+drop-search([
+										{
+											link: 'Реализация требований <b>про</b>фессионального стандарта «Педагог» в деятельности учителя начальных классов в процессе организации обучения в соответствии с ФГОС НОО для учащихся с ОВЗ',
+											href: '#'
+										},
+										{
+											link: 'Преподаватель в системе <b>про</b>фессионального образования',
+											href: '#'
+										},
+										{link: '<b>Про</b>фессональное управление <b>про</b>ектами', href: '#'}
+									])

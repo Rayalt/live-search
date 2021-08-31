@@ -1,0 +1,20 @@
+@mixin style-600-16-125p-1p {
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: 0.01em;
+	line-height: 125%;
+}
+
+@mixin style-subtitle-600-20-120p-1p {
+	color: var(--color-dark-secondary);
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: 0.01em;
+	line-height: 150%;
+	@media (min-width: $screen-sm) {
+		font-size: 20px;
+		line-height: 120%;
+	}
+}
