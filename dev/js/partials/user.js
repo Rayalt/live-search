@@ -3,7 +3,7 @@
 window.onload = function() {
 	const inputClear = document.querySelector('.input__clear'),
 		input = document.querySelector('.input__search'),
-		searchItemList = document.querySelectorAll('.card-header__title'), //, .pill, .card-header__subtitle, .card-descr__text, .card-descr__title
+		searchItemList = document.querySelectorAll('.card-header__title, .pill, .card-header__subtitle, .card-descr__text, .card-descr__title'), //, 
 		sectionList = document.querySelectorAll('.courses__section'),
 		cardCoursesItemList = document.querySelectorAll('.card-courses__item'),
 		dropSearch = document.querySelector('.drop-search');
@@ -50,11 +50,8 @@ window.onload = function() {
 				for (let searchItem of searchItemList) {
 					if (searchItem.innerHTML.toLowerCase().indexOf(inputValue.toLowerCase()) !== -1) {
 						
-						//let nbspIndex = getListIdx(searchItem.innerHTML, '&nbsp;');
 						searchItem.parentNode.parentNode.parentNode.style.display = 'flex';
 						searchItem.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.style.display = 'block';
-
-						//searchItem.innerHTML = searchItem.innerHTML.replace(/&nbsp;/gi, ' ');
 						
 						let li = document.createElement('li'),
 							link = document.createElement('a');
@@ -68,24 +65,13 @@ window.onload = function() {
 							let strongEx = searchItem.innerHTML.slice(index, index + inputValue.length);
 							link.innerHTML = searchItem.innerHTML.split(strongEx).join(`<strong>${strongEx}</strong>`);
 						}
-
-						// for (let i of nbspIndex) {
-						// 	searchItem.innerHTML = searchItem.innerHTML.replace(i, '&nbsp;');
-						// }
 					}
 				}
 			}
-		} else if (inputValue.length >= 1 && inputValue.length <= 2) {
-			// for (let searchItem of searchItemList) {
-			// 	searchItem.innerHTML = searchItem.innerHTML.replace(/&nbsp;/gi, ' ');
-			// }
-		}  else {
+		} else {
 			dropSearch.style.display = 'none';
 			cardCoursesItemList.forEach(cardCoursesItem => cardCoursesItem.style.display = 'flex');
 			sectionList.forEach(section => section.style.display = 'block');
-			// for (let searchItem of searchItemList) {
-			// 	searchItem.innerHTML = searchItem.innerHTML.replace(' ', '&nbsp;');
-			// }
 		}
 
 		if (inputValue !== '') {
