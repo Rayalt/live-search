@@ -20,7 +20,7 @@ block content
 								.input.hero__input
 									input.input__search(placeholder='Введите название курса' type='search')
 									svg.input__clear
-										use(xlink:href='/img/svgSprite.svg#icon__cross')
+										use(xlink:href='img/svgSprite.svg#icon__cross')
 								ul.drop-search(style='display: none;')
 									li.drop-search__loader
 										+loader
@@ -133,47 +133,3 @@ block content
 										}]
 									}
 								])
-	//-section.section
-		.section__inner
-			.grid
-				.grid__row
-					.grid__col.grid__col_xs-12.grid__col_md-8.col-offset__md-2
-						.hero
-							.hero__search
-								h2.hero__subtitle.subtitle Найти курс по названию:
-								form.hero__form
-									.input.hero__input
-										input.input__search(placeholder='Введите название курса' type='search')
-									ul.drop-search
-										li.drop-search__loader
-											+loader
-				.grid__row
-					.grid__col.grid__col_xs-12.grid__col_md-8.col-offset__md-2
-						.hero
-							.hero__search
-								h2.hero__subtitle.subtitle Найти курс по названию:
-								form.hero__form
-									.input.hero__input
-										input.input__search(placeholder='Введите название курса' type='search')
-									ul.drop-search
-										li.drop-search__item
-											.drop-search__message Ничего не найдено
-				.grid__row
-					.grid__col.grid__col_xs-12.grid__col_md-8.col-offset__md-2
-						.hero
-							.hero__search
-								h2.hero__subtitle.subtitle Найти курс по названию:
-								form.hero__form
-									.input.hero__input
-										input.input__search(placeholder='Введите название курса' type='search')
-									+drop-search([
-										{
-											link: 'Реализация требований <b>про</b>фессионального стандарта «Педагог» в деятельности учителя начальных классов в процессе организации обучения в соответствии с ФГОС НОО для учащихся с ОВЗ',
-											href: '#'
-										},
-										{
-											link: 'Преподаватель в системе <b>про</b>фессионального образования',
-											href: '#'
-										},
-										{link: '<b>Про</b>фессональное управление <b>про</b>ектами', href: '#'}
-									])
